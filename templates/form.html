@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abalone Sex Prediction Form</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Header */
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        /* Form Group */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555555;
+        }
+
+        /* Input Fields and Select */
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+            outline: none;
+        }
+
+        /* Button */
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #007bff;
+            color: #ffffff;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Abalone Sex Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="Length">Length:</label>
+                <input type="number" name="Length" id="Length" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="Diameter">Diameter:</label>
+                <input type="number" name="Diameter" id="Diameter" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="Height">Height:</label>
+                <input type="number" name="Height" id="Height" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="Whole_weight">Whole Weight:</label>
+                <input type="number" name="Whole weight" id="Whole_weight" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="Shucked_weight">Shucked Weight:</label>
+                <input type="number" name="Shucked weight" id="Shucked_weight" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="Viscera_weight">Viscera Weight:</label>
+                <input type="number" name="Viscera weight" id="Viscera_weight" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="Shell_weight">Shell Weight:</label>
+                <input type="number" name="Shell weight" id="Shell_weight" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="Rings">Rings:</label>
+                <input type="number" name="Rings" id="Rings" step="any" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
